@@ -12,11 +12,11 @@ AWS.config.apiVersions = {
 
 let ssm = new AWS.SSM();
 found = false
-exports.patientMeasure = async (event, _context, callback) => {
-   console.log("starting..")
-   return await init()
-}
-
+// exports.patientMeasure = async (event, _context, callback) => {
+//    console.log("starting..")
+//    return await init()
+// }
+init()
 
 function init(){
   return new Promise((resolve, reject) => {
@@ -113,7 +113,7 @@ function asyncSetParam(param){
 async function tangle(counter, data) {
   console.log("attaching...")
   console.log(data)
-    let client = new MamClient('https://nodes.thetangle.org:443', "QFSXAACAT9SEOINVOLPFIWACPXJZSNIFQLBDRSMPFVZOSS9IEOFHVCVXYSRKAEFHPVIGSTNQWKWRRHTCF")
+    let client = new MamClient('https://nodes.thetangle.org:443', "QFSXAACAT9SEOINAOLPFIWACPXJZSNIFQLBDRSMPFVZOSS9IEOFHVCVXYSRKAEFHPVIGSTNQWKWRRHTCF")
     // INIT the index to store the data and delete it afterwards.
     try {
       return root = await client.send(JSON.stringify(data), parseInt(counter))
