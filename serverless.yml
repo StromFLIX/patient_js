@@ -1,0 +1,16 @@
+service: patient
+
+provider:
+    name: aws
+    role: arn:aws:iam::430874853768:role/TangleLambda
+    runtime: nodejs8.10
+    region: eu-central-1
+    stage: prod
+
+functions:
+    patientMeasure:
+        handler: handler.patientMeasure
+        timeout: 30 # optional, in seconds, default is 6
+        events:
+            # Invoke Lambda function every 3rd minute
+            - schedule: rate(5 minutes)

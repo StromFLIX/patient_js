@@ -1,0 +1,19 @@
+{
+  "name": "patient_js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "handler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.384.0",
+    "csv-parser": "^2.1.0",
+    "curl.lib.js": "^1.0.22",
+    "fast-csv": "^2.4.1",
+    "iota.lib.js": "^0.4.7",
+    "mam.client.js": "git+https://github.com/iotaledger/mam.client.js.git"
+  }
+}
